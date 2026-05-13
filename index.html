@@ -1,218 +1,455 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Qiana Cunningham | Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qiana N. Cunningham, MBA - Business Systems Analyst & Technical Project Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
-  <!-- ===== NAVIGATION ===== -->
-  <nav id="navbar">
-    <div class="nav-brand">Qiana Cunningham</div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
+  <nav>
+    <div class="nav-logo">Qiana N. Cunningham</div>
+    <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <p class="hero-greeting">Hi, I'm</p>
-      <h1 class="hero-name">Qiana Cunningham</h1>
-      <p class="hero-tagline"><!-- Add your title / tagline here --></p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+  <section class="hero" id="hero">
+    <div class="hero-eyebrow">Portfolio</div>
+    <h1 class="hero-name">Qiana <em>N.</em> Cunningham</h1>
+    <p class="hero-mba">MBA</p>
+    <p class="hero-title">
+      <strong>Technical Project Manager</strong> &nbsp;&middot;&nbsp; <strong>Senior Business Systems Analyst</strong>
+    </p>
+    <p class="hero-tagline">
+      Translating complex business requirements into scalable, high-integrity systems across telecommunications, insurance, financial services, and manufacturing for over a decade.
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">10+</div>
+        <div class="hero-stat-label">Years of Experience</div>
       </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">98%</div>
+        <div class="hero-stat-label">On-Time Delivery Rate</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">40%</div>
+        <div class="hero-stat-label">Defect Resolution Reduction</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">4+</div>
+        <div class="hero-stat-label">Industries Served</div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-outline">Get In Touch</a>
+      <div class="btn-resume-wrap">
+        <a href="assets/docs/Qiana_Cunningham_BSA_Resume.docx" download class="btn-resume">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          View &amp; Download Resume
+        </a>
+        <div class="btn-resume-tooltip">Last updated: May 2025</div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="section">
+  <section id="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <div class="section-label">Who I Am</div>
+      <h2 class="section-title">A <em>strategic bridge</em> between business vision &amp; technical execution</h2>
       <div class="about-grid">
-        <div class="about-image">
-          <!-- Replace 'profile.jpg' with your photo -->
-          <div class="avatar-placeholder">
-            <i class="fas fa-user"></i>
+        <div class="about-left fade-in">
+          <blockquote class="about-quote">
+            "An experienced Senior Business Systems Analyst acts as a force multiplier - bridging the gap between high-level strategy and technical execution."
+          </blockquote>
+          <div class="about-credentials">
+            <div class="cred-item">
+              <div class="cred-icon">MBA</div>
+              <div class="cred-text">
+                <strong>Master of Business Administration</strong>
+                Project Management &middot; American InterContinental University
+              </div>
+            </div>
+            <div class="cred-item">
+              <div class="cred-icon">BS</div>
+              <div class="cred-text">
+                <strong>Bachelor of Science, Business Management</strong>
+                SUNY Empire State College
+              </div>
+            </div>
+            <div class="cred-item">
+              <div class="cred-icon">&times;3</div>
+              <div class="cred-text">
+                <strong>Triple Certified</strong>
+                CBAP &middot; PMI-PBA &middot; IIBA-AAC
+              </div>
+            </div>
           </div>
         </div>
-        <div class="about-text">
-          <p>
-            <!-- Write a short bio about yourself here. Who are you, what do you do,
-                 and what are you passionate about? -->
-            Welcome to my portfolio! I am a passionate professional with a
-            drive for creating meaningful and impactful work. Feel free to
-            explore my projects and reach out — I'd love to connect.
-          </p>
-          <a href="#" class="btn btn-primary" download>Download Resume</a>
+        <div class="about-right fade-in fade-in-delay-1">
+          <p>With over <strong>10 years of enterprise experience</strong>, I specialize in closing the gap between what business leaders envision and what technical teams can build - translating ambiguous requirements into precise, actionable specifications that ship on time.</p>
+          <p>My background spans <strong>Salesforce &amp; Microsoft Dynamics 365 CRM</strong>, ERP modernization, API validation, Agile delivery, and regulatory compliance. I have supported multi-million dollar initiatives across Cox Communications, AIG, Assurant, AGCO Corporation, and Safe-Guard Products - consistently delivering at a <strong>98% on-time rate</strong> while reducing defect cycles by up to 40%.</p>
+          <p>I don't just document requirements - I <strong>architect the process</strong> that turns complex, high-stakes business needs into reliable, scalable technology, whether that's a life-safety E911 system or a fraud mitigation engine protecting millions of customers.</p>
+          <div class="value-pills">
+            <span class="pill">Agile Delivery</span>
+            <span class="pill">Stakeholder Management</span>
+            <span class="pill">UAT Leadership</span>
+            <span class="pill">Requirements Engineering</span>
+            <span class="pill">Systems Integration</span>
+            <span class="pill">Digital Transformation</span>
+            <span class="pill">Regulatory Compliance</span>
+            <span class="pill">Data-Driven Decisions</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
-  <section id="skills" class="section section-alt">
+  <section id="experience">
     <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <!-- Add or remove skill cards as needed -->
-        <div class="skill-card">
-          <i class="fab fa-html5"></i>
-          <span>HTML5</span>
+      <div class="section-label">Career Journey</div>
+      <h2 class="section-title">A decade of <em>high-impact</em> delivery</h2>
+      <div class="exp-timeline">
+        <div class="exp-item fade-in">
+          <div class="exp-dot"><div class="exp-dot-inner"></div></div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div class="exp-role">Insurance &amp; CRM Analyst</div>
+              <div class="exp-period">2025 - Present</div>
+            </div>
+            <div class="exp-company"><strong>State Farm Agent Office</strong> &middot; Duluth, GA</div>
+            <ul class="exp-bullets">
+              <li>Maintain Salesforce CRM data quality by validating client records and enforcing consistency standards across 50+ daily customer interactions.</li>
+              <li>Streamline office workflows by identifying process gaps and implementing targeted improvements that enhance client experience and response times.</li>
+              <li>Improved customer data privacy by implementing profile enhancements that masked Social Security Numbers - retaining only the last four digits for secure identification.</li>
+            </ul>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fab fa-css3-alt"></i>
-          <span>CSS3</span>
+
+        <div class="exp-item fade-in fade-in-delay-1">
+          <div class="exp-dot"><div class="exp-dot-inner"></div></div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div class="exp-role">Technical Project Manager / Sr. Business Systems Analyst</div>
+              <div class="exp-period">2021 - 2024</div>
+            </div>
+            <div class="exp-company"><strong>Cognizant Technology Solutions</strong> &middot; Client: Cox Communications, Atlanta, GA</div>
+            <ul class="exp-bullets">
+              <li>Led CRM and enterprise system initiatives spanning Salesforce and Microsoft Dynamics 365 for a 25-member cross-functional team while managing scope, schedules, and delivery.</li>
+              <li>Facilitated Agile ceremonies - sprint planning, backlog grooming, and stakeholder collaboration - translating requirements into user stories, acceptance criteria, and functional specs.</li>
+              <li>Spearheaded integration of robocall protection and fraud mitigation tools, architecting secure customer verification workflows for mobile service activations.</li>
+              <li>Served as strategic lead on Microsoft Teams E911 implementation, translating life-safety requirements into emergency routing specifications meeting regulatory standards.</li>
+            </ul>
+            <div class="exp-highlight">
+              <div class="exp-highlight-num">25</div>
+              <div class="exp-highlight-text">Member cross-functional team<br>managed end-to-end</div>
+            </div>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fab fa-js"></i>
-          <span>JavaScript</span>
+
+        <div class="exp-item fade-in">
+          <div class="exp-dot"><div class="exp-dot-inner"></div></div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div class="exp-role">Technical Project Manager / Business Analyst</div>
+              <div class="exp-period">2021</div>
+            </div>
+            <div class="exp-company"><strong>Safe-Guard Products International, LLC</strong> &middot; Atlanta, GA</div>
+            <ul class="exp-bullets">
+              <li>Managed ERP and CRM enhancements through the full project lifecycle from requirements gathering to production deployment.</li>
+              <li>Produced technical documentation, test scenarios, and UAT support materials to facilitate stakeholder validation and sign-off.</li>
+            </ul>
+            <div class="exp-highlight">
+              <div class="exp-highlight-num">40%</div>
+              <div class="exp-highlight-text">Reduction in defect<br>resolution time</div>
+            </div>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fab fa-react"></i>
-          <span>React</span>
+
+        <div class="exp-item fade-in fade-in-delay-1">
+          <div class="exp-dot"><div class="exp-dot-inner"></div></div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div class="exp-role">Senior IT Business Analyst / Project Lead</div>
+              <div class="exp-period">2019 - 2020</div>
+            </div>
+            <div class="exp-company"><strong>AGCO Corporation</strong> &middot; Duluth, GA</div>
+            <ul class="exp-bullets">
+              <li>Supported delivery of global web and mobile applications, managing 10-15 concurrent initiatives per release cycle.</li>
+              <li>Spearheaded delivery of the Electronic Diagnostic Tool (EDT) and Tech Connect Suite, enabling dealers worldwide to communicate with machine electronics, monitor real-time machine data, and calibrate ECUs globally.</li>
+              <li>Coordinated cross-functional dependencies for AGCO Connect, a next-generation telemetry solution for remote diagnostics and machine health monitoring.</li>
+            </ul>
+            <div class="exp-highlight">
+              <div class="exp-highlight-num">98%</div>
+              <div class="exp-highlight-text">On-time delivery rate<br>across global initiatives</div>
+            </div>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fab fa-node-js"></i>
-          <span>Node.js</span>
+
+        <div class="exp-item fade-in">
+          <div class="exp-dot"><div class="exp-dot-inner"></div></div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div class="exp-role">Business Systems Analyst</div>
+              <div class="exp-period">2017 - 2019</div>
+            </div>
+            <div class="exp-company"><strong>Assurant, Inc.</strong> &middot; Atlanta, GA</div>
+            <ul class="exp-bullets">
+              <li>Led initiatives for new and enhanced insurance products, aligning business, technology, and operations stakeholders through requirements elicitation and gap analysis.</li>
+              <li>Executed UAT planning, test scripting, defect management, and stakeholder validation to support quality releases and cross-functional collaboration.</li>
+            </ul>
+          </div>
         </div>
-        <div class="skill-card">
-          <i class="fas fa-database"></i>
-          <span>SQL</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-python"></i>
-          <span>Python</span>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-git-alt"></i>
-          <span>Git</span>
+
+        <div class="exp-item fade-in fade-in-delay-1">
+          <div class="exp-dot"><div class="exp-dot-inner"></div></div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <div class="exp-role">Business Analyst / Compliance Analyst</div>
+              <div class="exp-period">2012 - 2017</div>
+            </div>
+            <div class="exp-company"><strong>American International Group (AIG)</strong> &middot; Atlanta, GA &amp; New York, NY</div>
+            <ul class="exp-bullets">
+              <li>Gathered and documented business and system requirements while collaborating with cross-functional stakeholders to support enterprise enhancements and regulatory compliance.</li>
+              <li>Improved data privacy controls by implementing partial SSN masking in customer-facing and internal profile systems - a practice carried forward across multiple client engagements.</li>
+              <li>Supported backlog refinement, UAT execution, defect resolution, and release validation to improve system performance and delivery outcomes.</li>
+            </ul>
+            <div class="exp-highlight">
+              <div class="exp-highlight-num">99%</div>
+              <div class="exp-highlight-text">Quality score maintained<br>across compliance initiatives</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects" class="section">
+  <section id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <div class="section-label section-label-projects">Signature Work</div>
+      <h2 class="section-title">High-stakes projects, <em>delivered</em></h2>
       <div class="projects-grid">
-
-        <!-- Project Card 1 — duplicate and fill in for each project -->
-        <div class="project-card">
-          <div class="project-img-placeholder">
-            <i class="fas fa-code"></i>
-          </div>
-          <div class="project-info">
-            <h3>Project One</h3>
-            <p>A short description of what this project does and the technologies used.</p>
-            <div class="project-links">
-              <a href="#" class="btn btn-sm btn-primary" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="btn btn-sm btn-outline" target="_blank">
-                <i class="fab fa-github"></i> Code
-              </a>
+        <div class="project-card fade-in">
+          <div class="project-tag">Cox Communications &middot; E911 Life Safety</div>
+          <h3 class="project-name">Microsoft Teams E911 Emergency Routing Implementation</h3>
+          <p class="project-desc">Served as the strategic interface between network engineering, legal compliance, and business operations. Translated life-safety requirements into precise technical specifications - ensuring dynamic location services and emergency routing met both architectural and regulatory mandates. Managed a prioritized backlog and cross-functional dependencies to move from complex infrastructure design to a validated, production-ready safety asset.</p>
+          <div class="project-impact">
+            <div class="impact-item">
+              <div class="impact-val">Regulatory</div>
+              <div class="impact-label">Compliance Achieved</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-val">Zero</div>
+              <div class="impact-label">Life-Safety Gaps at Launch</div>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 2 -->
-        <div class="project-card">
-          <div class="project-img-placeholder">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="project-info">
-            <h3>Project Two</h3>
-            <p>A short description of what this project does and the technologies used.</p>
-            <div class="project-links">
-              <a href="#" class="btn btn-sm btn-primary" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="btn btn-sm btn-outline" target="_blank">
-                <i class="fab fa-github"></i> Code
-              </a>
+        <div class="project-card fade-in fade-in-delay-1">
+          <div class="project-tag">Cox Communications &middot; Fraud Mitigation</div>
+          <h3 class="project-name">Robocall Protection &amp; Fraud Mitigation Platform</h3>
+          <p class="project-desc">Spearheaded the integration of analytical tools for fraud mitigation - managing the deployment of real-time robocall protection systems that identify and screen scams before they reach customers. Architected secure customer verification workflows and oversaw technical validation for mobile service activations, ensuring device compliance and seamless connectivity at enterprise scale.</p>
+          <div class="project-impact">
+            <div class="impact-item">
+              <div class="impact-val">Real-Time</div>
+              <div class="impact-label">Scam Detection</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-val">Enterprise</div>
+              <div class="impact-label">Scale Deployment</div>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 3 -->
-        <div class="project-card">
-          <div class="project-img-placeholder">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <div class="project-info">
-            <h3>Project Three</h3>
-            <p>A short description of what this project does and the technologies used.</p>
-            <div class="project-links">
-              <a href="#" class="btn btn-sm btn-primary" target="_blank">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="#" class="btn btn-sm btn-outline" target="_blank">
-                <i class="fab fa-github"></i> Code
-              </a>
+        <div class="project-card fade-in fade-in-delay-2">
+          <div class="project-tag">AGCO Corporation &middot; Global Manufacturing</div>
+          <h3 class="project-name">Electronic Diagnostic Tool (EDT) &amp; Tech Connect Suite</h3>
+          <p class="project-desc">Spearheaded technical delivery of the EDT - enabling dealers worldwide to communicate with machine electronics, monitor real-time operational data, and calibrate engine control units (ECUs) to significantly reduce equipment downtime. Coordinated AGCO Connect telemetry, TCD-CV diagnostic modules, Quality Gate Five (Dyno-Jounce), and SCR monitoring across a global cross-functional team.</p>
+          <div class="project-impact">
+            <div class="impact-item">
+              <div class="impact-val">98%</div>
+              <div class="impact-label">On-Time Delivery Rate</div>
+            </div>
+            <div class="impact-item">
+              <div class="impact-val">Global</div>
+              <div class="impact-label">Dealer Network</div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="section section-alt">
+  <section id="skills">
     <div class="container">
-      <h2 class="section-title">Contact Me</h2>
-      <p class="contact-intro">
-        Have a question or want to work together? Send me a message!
-      </p>
-      <form class="contact-form" id="contactForm" novalidate>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <div class="section-label">Capabilities</div>
+      <h2 class="section-title">Technical <em>proficiency</em> &amp; core competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-category fade-in">
+          <div class="skill-cat-title">Business Analysis</div>
+          <div class="skill-item"><span class="skill-name">Requirements Engineering</span><div class="skill-bar-wrap"><div class="skill-bar skill-98"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Process Optimization</span><div class="skill-bar-wrap"><div class="skill-bar skill-97"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Gap Analysis</span><div class="skill-bar-wrap"><div class="skill-bar skill-95"></div></div></div>
+          <div class="skill-item"><span class="skill-name">UAT Planning &amp; Defect Mgmt</span><div class="skill-bar-wrap"><div class="skill-bar skill-96"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Stakeholder Alignment</span><div class="skill-bar-wrap"><div class="skill-bar skill-98"></div></div></div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="your@email.com" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="form-status" id="formStatus"></p>
-      </form>
 
-      <div class="social-links">
-        <!-- Replace # with your actual profile URLs -->
-        <a href="#" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" aria-label="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="mailto:your@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        <div class="skill-category fade-in fade-in-delay-1">
+          <div class="skill-cat-title">Project Management</div>
+          <div class="skill-item"><span class="skill-name">Agile / Scrum Facilitation</span><div class="skill-bar-wrap"><div class="skill-bar skill-97"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Release Planning &amp; Governance</span><div class="skill-bar-wrap"><div class="skill-bar skill-94"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Risk &amp; Dependency Management</span><div class="skill-bar-wrap"><div class="skill-bar skill-93"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Cross-Functional Team Leadership</span><div class="skill-bar-wrap"><div class="skill-bar skill-96"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Executive Reporting</span><div class="skill-bar-wrap"><div class="skill-bar skill-92"></div></div></div>
+        </div>
+
+        <div class="skill-category fade-in fade-in-delay-2">
+          <div class="skill-cat-title">Systems &amp; Data</div>
+          <div class="skill-item"><span class="skill-name">Salesforce CRM</span><div class="skill-bar-wrap"><div class="skill-bar skill-94"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Microsoft Dynamics 365</span><div class="skill-bar-wrap"><div class="skill-bar skill-92"></div></div></div>
+          <div class="skill-item"><span class="skill-name">SQL &amp; Snowflake</span><div class="skill-bar-wrap"><div class="skill-bar skill-88"></div></div></div>
+          <div class="skill-item"><span class="skill-name">API Validation (Postman)</span><div class="skill-bar-wrap"><div class="skill-bar skill-90"></div></div></div>
+          <div class="skill-item"><span class="skill-name">Systems Integration Architecture</span><div class="skill-bar-wrap"><div class="skill-bar skill-91"></div></div></div>
+        </div>
+      </div>
+
+      <div class="tools-section fade-in">
+        <div class="tools-label">Technical Tools &amp; Platforms</div>
+        <div class="tools-grid">
+          <span class="tool-chip">Salesforce</span>
+          <span class="tool-chip">Microsoft Dynamics 365</span>
+          <span class="tool-chip">Jira</span>
+          <span class="tool-chip">Azure DevOps</span>
+          <span class="tool-chip">Confluence</span>
+          <span class="tool-chip">SQL</span>
+          <span class="tool-chip">Snowflake</span>
+          <span class="tool-chip">Postman</span>
+          <span class="tool-chip">Microsoft Teams</span>
+          <span class="tool-chip">SharePoint</span>
+          <span class="tool-chip">Microsoft Office Suite</span>
+          <span class="tool-chip">Generative AI Applications</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-label">Credentials</div>
+      <h2 class="section-title">Certifications &amp; <em>professional training</em></h2>
+      <div class="certs-grid">
+        <div class="cert-card fade-in">
+          <div class="cert-badge">CBAP</div>
+          <div class="cert-name">Certified Business Analysis Professional</div>
+          <div class="cert-org">International Institute of Business Analysis (IIBA)</div>
+        </div>
+
+        <div class="cert-card fade-in fade-in-delay-1">
+          <div class="cert-badge">PBA</div>
+          <div class="cert-name">Professional in Business Analysis (PMI-PBA)</div>
+          <div class="cert-org">Project Management Institute (PMI)</div>
+        </div>
+
+        <div class="cert-card fade-in fade-in-delay-2">
+          <div class="cert-badge">AAC</div>
+          <div class="cert-name">Agile Analysis Certification (IIBA-AAC)</div>
+          <div class="cert-org">International Institute of Business Analysis (IIBA)</div>
+        </div>
+
+        <div class="cert-card fade-in fade-in-delay-3">
+          <div class="cert-badge">GT</div>
+          <div class="cert-name">Cyber &amp; Network Security Boot Camp</div>
+          <div class="cert-org">Georgia Institute of Technology</div>
+        </div>
+
+        <div class="cert-card fade-in">
+          <div class="cert-badge">AI</div>
+          <div class="cert-name">Generative AI Applications Training</div>
+          <div class="cert-org">Continuing Professional Education</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-label section-label-projects">Academic Background</div>
+      <h2 class="section-title">Education &amp; <em>foundations</em></h2>
+      <div class="edu-grid">
+        <div class="edu-card fade-in">
+          <div class="edu-degree">Master of Business Administration</div>
+          <div class="edu-field">Concentration: Project Management</div>
+          <div class="edu-school">American InterContinental University</div>
+        </div>
+        <div class="edu-card fade-in fade-in-delay-1">
+          <div class="edu-degree">Bachelor of Science</div>
+          <div class="edu-field">Business Management</div>
+          <div class="edu-school">SUNY Empire State College</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Let's Connect</div>
+      <div class="contact-wrap">
+        <div class="fade-in">
+          <h2 class="contact-intro">Ready to bring your <em>next initiative</em> across the finish line.</h2>
+          <p class="contact-sub">Whether you need a seasoned Business Systems Analyst to anchor a complex transformation, or a Technical Project Manager to drive cross-functional alignment - let's talk about how I can add immediate value to your organization.</p>
+        </div>
+        <div class="contact-links fade-in fade-in-delay-1">
+          <a href="mailto:Qiana.Cunningham@gmail.com" class="contact-link-item">
+            <div class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-label">Email</div>
+              <div class="contact-link-val">Qiana.Cunningham@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/qianacunningham" target="_blank" rel="noopener" class="contact-link-item">
+            <div class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-label">LinkedIn</div>
+              <div class="contact-link-val">linkedin.com/in/qianacunningham</div>
+            </div>
+          </a>
+          <div class="btn-resume-wrap contact-resume-wrap">
+            <a href="assets/docs/Qiana_Cunningham_BSA_Resume.docx" download class="contact-link-item contact-resume-btn">
+              <div class="contact-link-icon contact-resume-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-link-label">Resume</div>
+                <div class="contact-link-val">View &amp; Download Resume</div>
+              </div>
+            </a>
+            <div class="btn-resume-tooltip contact-tooltip">Last updated: May 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; <span id="year"></span> Qiana Cunningham. All rights reserved.</p>
+    <p>&copy; 2025 <span>Qiana N. Cunningham</span> &middot; MBA &middot; CBAP &middot; PMI-PBA &middot; IIBA-AAC &middot; All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
