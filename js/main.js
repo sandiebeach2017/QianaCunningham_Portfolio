@@ -10,3 +10,19 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".fade-in").forEach((element) => observer.observe(element));
+
+const backToTopButton = document.querySelector("#backToTop");
+
+const toggleBackToTopButton = () => {
+  if (!backToTopButton) return;
+  backToTopButton.classList.toggle("is-visible", window.scrollY > 360);
+};
+
+if (backToTopButton) {
+  window.addEventListener("scroll", toggleBackToTopButton, { passive: true });
+  toggleBackToTopButton();
+
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
