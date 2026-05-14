@@ -14,16 +14,38 @@
   --text-muted: #7A8FA6;
   --accent-teal: #1E6B6B;
   --white: #FFFFFF;
+  --glass-light: rgba(250,247,240,0.78);
+  --glass-light-strong: rgba(255,255,255,0.84);
+  --glass-dark: rgba(13,27,42,0.72);
 }
 
 html { scroll-behavior: smooth; }
 
 body {
   font-family: "DM Sans", sans-serif;
-  background: var(--cream);
+  background: transparent;
   color: var(--text-dark);
   overflow-x: hidden;
   line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../assets/background.png") center center / cover no-repeat;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(13,27,42,0.62), rgba(13,27,42,0.52));
+  z-index: -1;
+  pointer-events: none;
 }
 
 nav {
@@ -35,6 +57,39 @@ nav {
   border-bottom: 1px solid rgba(184,149,58,0.25);
 }
 
+.nav-branding {
+  display: flex; align-items: center; gap: 1rem;
+}
+
+.nav-icon-link {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; min-width: 40px;
+  border-radius: 50%;
+  background: rgba(184,149,58,0.15);
+  border: 1px solid rgba(184,149,58,0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(184,149,58,0.3), inset 0 0 8px rgba(184,149,58,0.1);
+  text-decoration: none;
+}
+
+.nav-icon-link:hover {
+  background: rgba(184,149,58,0.25);
+  border-color: rgba(184,149,58,0.7);
+  box-shadow: 0 0 24px rgba(184,149,58,0.5), inset 0 0 12px rgba(184,149,58,0.2);
+  transform: scale(1.05);
+}
+
+.nav-icon {
+  width: 26px; height: 26px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(184,149,58,0.4));
+  transition: filter 0.3s ease;
+}
+
+.nav-icon-link:hover .nav-icon {
+  filter: drop-shadow(0 0 8px rgba(184,149,58,0.8));
+}
+
 .nav-logo {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.25rem; font-weight: 300; color: var(--gold-light);
@@ -44,7 +99,7 @@ nav {
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 
 .nav-links a {
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.82);
   text-decoration: none; font-size: 0.8rem;
   font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
   transition: color 0.25s;
@@ -54,7 +109,7 @@ nav {
 
 .hero {
   min-height: 100vh;
-  background: var(--navy);
+  background: rgba(13,27,42,0.58);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center;
   position: relative; overflow: hidden;
@@ -181,9 +236,9 @@ nav {
 
 .btn-outline {
   padding: 0.85rem 2rem; background: transparent;
-  color: rgba(255,255,255,0.75); font-weight: 400; font-size: 0.85rem;
+  color: rgba(255,255,255,0.9); font-weight: 400; font-size: 0.85rem;
   letter-spacing: 0.08em; text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,0.25); cursor: pointer; text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.45); cursor: pointer; text-decoration: none;
   transition: border-color 0.25s, color 0.25s, transform 0.2s;
   display: inline-block;
 }
@@ -193,7 +248,7 @@ nav {
 .hero-scroll {
   position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-  color: rgba(255,255,255,0.3); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
 }
 
 .scroll-line {
@@ -206,7 +261,19 @@ nav {
   50% { opacity: 1; transform: scaleY(1.1); }
 }
 
-section { padding: 6rem 2rem; }
+section {
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+section .container {
+  background: var(--glass-light);
+  border: 1px solid rgba(255,255,255,0.42);
+  border-radius: 20px;
+  padding: clamp(1.4rem, 3vw, 2.5rem);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 60px rgba(8,16,27,0.18), inset 0 1px 0 rgba(255,255,255,0.32);
+}
 .container { max-width: 1100px; margin: 0 auto; }
 
 .section-label {
@@ -229,7 +296,7 @@ section { padding: 6rem 2rem; }
 
 .section-title em { font-style: italic; color: var(--gold); }
 
-#about { background: var(--white); }
+#about { background: transparent; }
 
 .about-grid {
   display: grid; grid-template-columns: 1fr 1.5fr;
@@ -277,7 +344,7 @@ section { padding: 6rem 2rem; }
   letter-spacing: 0.04em; font-weight: 400;
 }
 
-#experience { background: var(--cream); }
+#experience { background: transparent; }
 
 .exp-timeline { margin-top: 3.5rem; position: relative; }
 
@@ -347,10 +414,15 @@ section { padding: 6rem 2rem; }
   font-size: 1.5rem; font-weight: 300; color: var(--gold);
 }
 
-.exp-highlight-text { font-size: 0.78rem; color: rgba(255,255,255,0.65); line-height: 1.4; }
+.exp-highlight-text { font-size: 0.78rem; color: rgba(255,255,255,0.8); line-height: 1.4; }
 
-#projects { background: var(--navy); }
+#projects { background: transparent; }
 #projects .section-title { color: var(--white); }
+
+#projects .container {
+  background: var(--glass-dark);
+  border-color: rgba(184,149,58,0.3);
+}
 
 .projects-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -387,7 +459,7 @@ section { padding: 6rem 2rem; }
 }
 
 .project-desc {
-  font-size: 0.88rem; color: rgba(255,255,255,0.5);
+  font-size: 0.88rem; color: rgba(255,255,255,0.7);
   line-height: 1.75; margin-bottom: 1.5rem;
 }
 
@@ -401,9 +473,9 @@ section { padding: 6rem 2rem; }
   font-size: 1.4rem; font-weight: 300; color: var(--gold);
 }
 
-.impact-label { font-size: 0.7rem; color: rgba(255,255,255,0.35); letter-spacing: 0.08em; }
+.impact-label { font-size: 0.7rem; color: rgba(255,255,255,0.58); letter-spacing: 0.08em; }
 
-#skills { background: var(--white); }
+#skills { background: transparent; }
 
 .skills-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -457,7 +529,7 @@ section { padding: 6rem 2rem; }
 
 .tool-chip:hover { border-color: var(--gold); color: var(--navy); background: var(--gold-pale); }
 
-#certifications { background: var(--cream); }
+#certifications { background: transparent; }
 
 .certs-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -489,8 +561,13 @@ section { padding: 6rem 2rem; }
 
 .cert-org { font-size: 0.78rem; color: var(--text-muted); }
 
-#education { background: var(--navy); padding: 5rem 2rem; }
+#education { background: transparent; padding: 5rem 2rem; }
 #education .section-title { color: var(--white); }
+
+#education .container {
+  background: var(--glass-dark);
+  border-color: rgba(184,149,58,0.3);
+}
 
 .edu-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -510,9 +587,15 @@ section { padding: 6rem 2rem; }
 }
 
 .edu-field { font-size: 0.85rem; color: var(--gold); margin-bottom: 0.5rem; font-weight: 500; }
-.edu-school { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+.edu-school { font-size: 0.8rem; color: rgba(255,255,255,0.66); }
 
-#contact { background: var(--cream); }
+#contact { background: transparent; }
+
+#about .container,
+#skills .container,
+#contact .container {
+  background: var(--glass-light-strong);
+}
 
 .contact-wrap {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -555,13 +638,13 @@ section { padding: 6rem 2rem; }
 .contact-link-val { font-size: 0.9rem; font-weight: 500; color: var(--navy); }
 
 footer {
-  background: var(--navy);
+  background: rgba(13,27,42,0.86);
   padding: 2rem; text-align: center;
   border-top: 1px solid rgba(184,149,58,0.2);
 }
 
 footer p {
-  font-size: 0.75rem; color: rgba(255,255,255,0.25);
+  font-size: 0.75rem; color: rgba(255,255,255,0.56);
   letter-spacing: 0.08em;
 }
 
@@ -697,9 +780,17 @@ footer span { color: var(--gold); }
 
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
+  .nav-branding { gap: 0.75rem; }
+  .nav-icon-link { width: 36px; height: 36px; }
+  .nav-icon { width: 22px; height: 22px; }
   .nav-links { gap: 1rem; }
   .nav-links a { font-size: 0.7rem; }
   section { padding: 4rem 1.25rem; }
+  section .container {
+    border-radius: 14px;
+    padding: 1.1rem;
+    backdrop-filter: blur(5px);
+  }
   .about-grid, .contact-wrap, .edu-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-portrait-wrap { width: clamp(130px, 35vw, 170px); margin-bottom: 1rem; }
   .hero-stats { gap: 2rem; }
