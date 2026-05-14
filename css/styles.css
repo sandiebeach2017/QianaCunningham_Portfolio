@@ -66,8 +66,9 @@ nav {
   width: 40px; height: 40px; min-width: 40px;
   border-radius: 50%;
   background: rgba(184,149,58,0.15);
-  border: 1px solid rgba(184,149,58,0.4);
+  border: 1px solid rgba(184,149,58,0.3);
   transition: all 0.3s ease;
+  animation: navIconGlowPulse 5s ease-in-out infinite;
   box-shadow: 0 0 12px rgba(184,149,58,0.3), inset 0 0 8px rgba(184,149,58,0.1);
   text-decoration: none;
 }
@@ -77,6 +78,19 @@ nav {
   border-color: rgba(184,149,58,0.7);
   box-shadow: 0 0 24px rgba(184,149,58,0.5), inset 0 0 12px rgba(184,149,58,0.2);
   transform: scale(1.05);
+}
+
+@keyframes navIconGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(184,149,58,0.2), inset 0 0 6px rgba(184,149,58,0.06);
+    border-color: rgba(184,149,58,0.28);
+    background: rgba(184,149,58,0.11);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(184,149,58,0.3), inset 0 0 8px rgba(184,149,58,0.1);
+    border-color: rgba(184,149,58,0.4);
+    background: rgba(184,149,58,0.15);
+  }
 }
 
 .nav-icon {
