@@ -26,3 +26,26 @@ if (backToTopButton) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+
+const skillFilterButtons = document.querySelectorAll(".skills-filter-btn");
+const skillCards = document.querySelectorAll(".skill-card");
+
+if (skillFilterButtons.length && skillCards.length) {
+  skillFilterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedFilter = button.dataset.filter;
+
+      skillFilterButtons.forEach((btn) => {
+        const isCurrent = btn === button;
+        btn.classList.toggle("is-active", isCurrent);
+        btn.setAttribute("aria-selected", isCurrent ? "true" : "false");
+      });
+
+      skillCards.forEach((card) => {
+        const cardGroup = card.dataset.skillGroup;
+        const shouldShow = selectedFilter === "all" || cardGroup === selectedFilter;
+        card.classList.toggle("is-hidden", !shouldShow);
+      });
+    });
+  });
+}
