@@ -11,6 +11,35 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".fade-in").forEach((element) => observer.observe(element));
 
+const navElement = document.querySelector("nav");
+const navToggleButton = document.querySelector(".nav-toggle");
+const navLinksContainer = document.querySelector(".nav-links");
+
+if (navElement && navToggleButton && navLinksContainer) {
+  const setMenuState = (isOpen) => {
+    navElement.classList.toggle("is-open", isOpen);
+    navToggleButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  };
+
+  navToggleButton.addEventListener("click", () => {
+    setMenuState(!navElement.classList.contains("is-open"));
+  });
+
+  navLinksContainer.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 768) setMenuState(false);
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) setMenuState(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenuState(false);
+  });
+}
+
 const backToTopButton = document.querySelector("#backToTop");
 
 const toggleBackToTopButton = () => {
